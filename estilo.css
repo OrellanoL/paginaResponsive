@@ -1,3 +1,9 @@
+/*
+font-family: 'Alegreya Sans', sans-serif;
+font-family: 'Alegreya Sans SC', sans-serif;
+font-family: 'Mr Dafoe', cursive;
+*/
+
 *{
     padding: 0;
     margin: 0;
@@ -6,11 +12,20 @@
 
 body{
     background-color: black;
-
+    min-height: 100vh; /*ESTO HACE QUE OCUPE EL 100 DE LA PANTALLA*/
+    display: flex;
+    flex-direction: column;
 }
 
+.cuerpo{
+    background-image: url("zapateria.png");
+    min-height: 50em;
+}
+
+/* -----------------BARRA SUPERIOR ----------------------------------------*/
+
 .barraSuperior{
-    padding: 1em 2em;
+    padding: 0.8em 2em;
 }
 
 .primeraFila{
@@ -28,7 +43,8 @@ body{
     align-items: center;
     justify-content: space-between;
  }
-#desplegable{
+
+ #desplegable{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -37,30 +53,38 @@ body{
     margin: auto;
 
 }
+.menu{
+    display: flex;
+}
+
+#desplegar{
+    margin: auto;
+}
 
 .opciones{
     font-family:'Alegreya Sans SC', sans-serif ;
     font-weight: 800;
     font-size: 1.5em;
-    color: #DE98B1;
+    color: #C08453;
     margin: 0.2em 0.2em;
     padding: 0.2em 0.2em;
 
 }
 
 .icono{
-    background-color: #DE98B1;
+    background-color: #C08453;
     border-radius: 0.25em;
-    margin: .7em .3em;
+    margin: 0.7em .3em;
     padding: .2em .4em;
 }
 
 .contacto{
     width: 10em;
+    margin-left: 1.1em;
 }
 
 #celular{
-    color: #DE98B1;
+    color:  #C08453;
     font-family: 'Alegreya Sans SC', sans-serif;
     font-weight: 800;
     font-size: 1.2em;
@@ -75,4 +99,39 @@ body{
 #linkWhatsapp:active, #linkWhatsapp:visited,#linkWhatsapp:link{
     color:black;
     text-decoration: none;
+}
+
+/*-----------------------------------------------FOOTER--------------------------------*/
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(99, 97, 97, 0.274);
+    margin-top: auto;
+}
+
+.textoFooter{
+    color:  #c08453bd;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: small;
+    
+}
+
+.ladoIzq, .ladoDerecho{
+    margin: 0.5em 0.5em;
+    padding: 0.2em 0.2em;
+}
+
+.ladoIzq{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ladoDerecho{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
